@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" android:required="false" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <application
+        android:name=".SaptariShopApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SaptariShop"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="false"
+        tools:targetApi="31">
+
+        <!--
+          नोट: हाल केवल SplashActivity र MainActivity (प्लेसहोल्डर) कोडमा लेखिएका छन्।
+          बाँकी स्क्रिनहरू (ProductDetail, Cart, Checkout, OrderSuccess, MyOrders,
+          OrderDetail, Admin* activities) अर्को विकास चरणमा थपिनुपर्छ — ती थपिसकेपछि
+          यहाँ <activity> एन्ट्री पनि थप्नुहोस्। README.md को खण्ड २ हेर्नुहोस्।
+        -->
+
+        <activity
+            android:name=".ui.common.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SaptariShop.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.customer.MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+    </application>
+
+</manifest>

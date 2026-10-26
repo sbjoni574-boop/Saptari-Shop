@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand palette: warm saffron + deep green, inspired by Nepal/Madhesh agricultural tones -->
+    <color name="brand_primary">#E8650A</color>
+    <color name="brand_primary_dark">#B94E06</color>
+    <color name="brand_primary_light">#FFE8D6</color>
+    <color name="brand_secondary">#1B8A5A</color>
+    <color name="brand_secondary_dark">#116B43</color>
+    <color name="brand_accent">#FFC107</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="background">#FAFAF7</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text_primary">#1F2122</color>
+    <color name="text_secondary">#6B6F72</color>
+    <color name="text_hint">#9AA0A6</color>
+    <color name="divider">#E8E8E4</color>
+
+    <color name="success">#2E7D32</color>
+    <color name="error">#D32F2F</color>
+    <color name="warning">#F9A825</color>
+    <color name="info">#1976D2</color>
+
+    <color name="price_color">#C62828</color>
+    <color name="badge_bg">#E8650A</color>
+
+    <color name="status_pending">#F9A825</color>
+    <color name="status_confirmed">#1976D2</color>
+    <color name="status_shipped">#7B1FA2</color>
+    <color name="status_delivered">#2E7D32</color>
+    <color name="status_cancelled">#D32F2F</color>
+
+    <color name="window_background">#FAFAF7</color>
+    <color name="ripple">#33E8650A</color>
+</resources>

@@ -1,0 +1,81 @@
+rules_version = '2';
+
+// ============================================================================
+// सप्तरी शप — Firestore Security Rules
+// ============================================================================
+// यी नियमहरूले निम्न कुरा सुनिश्चित गर्छन्:
+//   - जोकोही (anonymous auth सहित) उत्पादन/श्रेणी हेर्न सक्छ (ग्राहकका लागि)
+//   - केवल "admins" collection मा सूचीकृत UID भएको प्रयोगकर्ताले मात्र
+//     उत्पादन/श्रेणी थप्न, सम्पादन, मेटाउन र अर्डर स्थिति बदल्न सक्छ
+//   - ग्राहकले आफ्नै अर्डर मात्र हेर्न सक्छ (customerUid ले match गर्नुपर्छ)
+//   - ग्राहकले नयाँ अर्डर सिर्जना गर्न सक्छ तर status/उत्पादन मूल्य आफैं
+//     बदल्न सक्दैन — अर्डर सिर्जना भएपछि स्थिति परिवर्तन गर्ने अधिकार
+//     केवल एडमिनलाई मात्र छ।
+// ============================================================================
+
+function isAdmin() {
+  return request.auth != null &&
+         exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+}
+
+function isSignedIn() {
+  return request.auth != null;
+}
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---------------- ADMINS ----------------
+    // admins/{uid} डकुमेन्ट अस्तित्वले नै एडमिन प्रमाणित गर्छ।
+    // यो डकुमेन्ट Firebase Console बाट म्यानुअल रूपमा मात्र थप्न सकिन्छ
+    // (कुनै पनि क्लाइन्टबाट यसलाई लेख्न/परिवर्तन गर्न मिल्दैन)।
+    match /admins/{uid} {
+      allow read: if isSignedIn() && request.auth.uid == uid;
+      allow write: if false; // Console/Admin SDK बाट मात्र व्यवस्थापन हुन्छ
+    }
+
+    // ---------------- CATEGORIES ----------------
+    match /categories/{categoryId} {
+      allow read: if true; // सबैले श्रेणी हेर्न सक्छन् (ग्राहकका लागि आवश्यक)
+      allow create, update, delete: if isAdmin();
+    }
+
+    // ---------------- PRODUCTS ----------------
+    match /products/{productId} {
+      // सबैले सक्रिय उत्पादनहरू हेर्न सक्छन्; एडमिनले सबै (निष्क्रिय सहित) हेर्न सक्छ
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    // ---------------- ORDERS ----------------
+    match /orders/{orderId} {
+      // ग्राहकले आफ्नै अर्डर मात्र पढ्न सक्छ; एडमिनले सबै अर्डर पढ्न सक्छ
+      allow read: if isAdmin() ||
+                     (isSignedIn() && resource.data.customerUid == request.auth.uid);
+
+      // ग्राहकले अर्डर सिर्जना गर्न सक्छ, तर:
+      //  - customerUid आफ्नै auth.uid सँग मिल्नुपर्छ
+      //  - status सधैं "pending" बाट सुरु हुनुपर्छ
+      allow create: if isSignedIn() &&
+                       request.resource.data.customerUid == request.auth.uid &&
+                       request.resource.data.status == "pending" &&
+                       request.resource.data.totalAmount is number &&
+                       request.resource.data.totalAmount > 0 &&
+                       request.resource.data.customerName is string &&
+                       request.resource.data.customerName.size() > 0 &&
+                       request.resource.data.customerPhone is string &&
+                       request.resource.data.customerPhone.size() == 10 &&
+                       request.resource.data.localLevelId is string &&
+                       request.resource.data.localLevelId.size() > 0 &&
+                       request.resource.data.wardNo is int &&
+                       request.resource.data.wardNo > 0 &&
+                       request.resource.data.villageTole is string &&
+                       request.resource.data.villageTole.size() > 0;
+
+      // केवल एडमिनले मात्र अर्डर अपडेट (जस्तै status परिवर्तन) वा मेटाउन सक्छ।
+      // ग्राहकले आफ्नो अर्डर सिर्जना गरेपछि कुनै फिल्ड बदल्न सक्दैन (ताकि
+      // कसैले price/status छलफल नगरी बदल्न नसकोस्)।
+      allow update, delete: if isAdmin();
+    }
+  }
+}

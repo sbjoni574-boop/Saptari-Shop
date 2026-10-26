@@ -1,0 +1,32 @@
+rules_version = '2';
+
+// ============================================================================
+// सप्तरी शप — Firebase Storage Security Rules
+// ============================================================================
+// - उत्पादनका फोटोहरू (products/{productId}/...) सबैले हेर्न सक्छन् (ग्राहक एपमा
+//   देखाउनका लागि), तर केवल प्रमाणित एडमिन (Firestore मा admins/{uid} अस्तित्वमा
+//   भएको प्रयोगकर्ता) ले मात्र अपलोड/परिवर्तन/मेटाउन सक्छ।
+// - फाइल साइज अधिकतम ५MB र इमेज प्रकार मात्र स्वीकार गरिन्छ।
+// ============================================================================
+
+function isAdmin() {
+  return request.auth != null &&
+         firestore.exists(/databases/(default)/documents/admins/$(request.auth.uid));
+}
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /products/{productId}/{fileName} {
+      allow read: if true;
+      allow write: if isAdmin() &&
+                      request.resource.size < 5 * 1024 * 1024 &&
+                      request.resource.contentType.matches('image/.*');
+      allow delete: if isAdmin();
+    }
+
+    // अन्य सबै बाटोमा पहुँच पूर्ण रूपमा अस्वीकृत (डिफल्ट सुरक्षित व्यवहार)
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

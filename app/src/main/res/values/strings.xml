@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">सप्तरी शप</string>
+    <string name="app_tagline">सप्तरीको आफ्नै अनलाइन पसल</string>
+
+    <!-- Common -->
+    <string name="loading">लोड हुँदैछ…</string>
+    <string name="retry">फेरि प्रयास गर्नुहोस्</string>
+    <string name="save">सुरक्षित गर्नुहोस्</string>
+    <string name="cancel">रद्द गर्नुहोस्</string>
+    <string name="delete">मेटाउनुहोस्</string>
+    <string name="edit">सम्पादन गर्नुहोस्</string>
+    <string name="add">थप्नुहोस्</string>
+    <string name="update">अपडेट गर्नुहोस्</string>
+    <string name="submit">पेश गर्नुहोस्</string>
+    <string name="next">अगाडि</string>
+    <string name="back">पछाडि</string>
+    <string name="confirm">पुष्टि गर्नुहोस्</string>
+    <string name="yes">हो</string>
+    <string name="no">होइन</string>
+    <string name="error_generic">केही त्रुटि भयो। फेरि प्रयास गर्नुहोस्।</string>
+    <string name="no_internet">इन्टरनेट जडान छैन। कृपया जाँच गर्नुहोस्।</string>
+    <string name="required_field">यो फिल्ड आवश्यक छ</string>
+    <string name="search_hint">उत्पादन खोज्नुहोस्…</string>
+    <string name="empty_search">कुनै उत्पादन फेला परेन</string>
+    <string name="rupee_symbol">रु.</string>
+    <string name="logout">लगआउट</string>
+
+    <!-- Splash -->
+    <string name="splash_loading">कृपया पर्खनुहोस्…</string>
+
+    <!-- Bottom nav -->
+    <string name="nav_home">गृहपृष्ठ</string>
+    <string name="nav_categories">श्रेणी</string>
+    <string name="nav_cart">कार्ट</string>
+    <string name="nav_orders">मेरा अर्डर</string>
+    <string name="nav_account">खाता</string>
+
+    <!-- Home -->
+    <string name="home_title">सप्तरी शप</string>
+    <string name="home_all_products">सबै उत्पादनहरू</string>
+    <string name="home_categories">श्रेणीहरू</string>
+    <string name="home_featured">विशेष अफर</string>
+    <string name="home_no_products">हाल कुनै उत्पादन उपलब्ध छैन</string>
+    <string name="home_welcome_banner">सप्तरी भित्रै छिटो डेलिभरी — Cash on Delivery उपलब्ध</string>
+
+    <!-- Product -->
+    <string name="product_price">मूल्य</string>
+    <string name="product_old_price_strike">पहिलेको मूल्य</string>
+    <string name="product_add_to_cart">कार्टमा थप्नुहोस्</string>
+    <string name="product_buy_now">अहिले नै किन्नुहोस्</string>
+    <string name="product_description">विवरण</string>
+    <string name="product_stock_available">स्टकमा उपलब्ध</string>
+    <string name="product_out_of_stock">स्टक सकियो</string>
+    <string name="product_quantity">परिमाण</string>
+    <string name="product_unit">इकाई</string>
+    <string name="product_category">श्रेणी</string>
+    <string name="product_added_to_cart">उत्पादन कार्टमा थपियो</string>
+    <string name="product_details_title">उत्पादन विवरण</string>
+
+    <!-- Cart -->
+    <string name="cart_title">मेरो कार्ट</string>
+    <string name="cart_empty">तपाईंको कार्ट खाली छ</string>
+    <string name="cart_empty_sub">किनमेल सुरु गर्न उत्पादनहरू हेर्नुहोस्</string>
+    <string name="cart_shop_now">अहिले किनमेल गर्नुहोस्</string>
+    <string name="cart_subtotal">जम्मा (Subtotal)</string>
+    <string name="cart_delivery_charge">डेलिभरी शुल्क</string>
+    <string name="cart_total">कुल रकम</string>
+    <string name="cart_proceed_checkout">चेकआउट गर्नुहोस्</string>
+    <string name="cart_remove_item">हटाउनुहोस्</string>
+    <string name="cart_item_count">%1$d वस्तुहरू</string>
+    <string name="cart_free_delivery_note">डेलिभरी शुल्क अर्डर पुष्टि हुँदा गणना हुनेछ</string>
+
+    <!-- Checkout -->
+    <string name="checkout_title">चेकआउट</string>
+    <string name="checkout_delivery_info">डेलिभरी जानकारी</string>
+    <string name="checkout_full_name">पूरा नाम</string>
+    <string name="checkout_phone">फोन नम्बर</string>
+    <string name="checkout_phone_hint">९८XXXXXXXX</string>
+    <string name="checkout_alt_phone">वैकल्पिक फोन नम्बर (ऐच्छिक)</string>
+    <string name="checkout_local_level">स्थानीय तह चयन गर्नुहोस्</string>
+    <string name="checkout_ward_no">वडा नं.</string>
+    <string name="checkout_village_tole">गाउँ/टोल</string>
+    <string name="checkout_village_tole_hint">उदाहरण: वार्ड नजिकैको मुख्य चोक, टोलको नाम</string>
+    <string name="checkout_landmark">नजिकैको चिन्ह (ऐच्छिक)</string>
+    <string name="checkout_landmark_hint">जस्तै: मन्दिर नजिक, स्कुल पछाडि आदि</string>
+    <string name="checkout_payment_method">भुक्तानी विधि</string>
+    <string name="checkout_cod">नगद भुक्तानी (Cash on Delivery)</string>
+    <string name="checkout_cod_note">सामान प्राप्त गर्दा नगद तिर्नुहोस्। अहिले भुक्तानी गर्नु पर्दैन।</string>
+    <string name="checkout_order_note">अर्डर नोट (ऐच्छिक)</string>
+    <string name="checkout_order_note_hint">डेलिभरीको लागि विशेष निर्देशन भए यहाँ लेख्नुहोस्</string>
+    <string name="checkout_order_summary">अर्डर सारांश</string>
+    <string name="checkout_place_order">अर्डर गर्नुहोस्</string>
+    <string name="checkout_select_local_level_hint">स्थानीय तह छान्नुहोस्</string>
+    <string name="checkout_placing_order">अर्डर पठाइदैछ…</string>
+    <string name="checkout_validation_name">कृपया पूरा नाम लेख्नुहोस्</string>
+    <string name="checkout_validation_phone">कृपया मान्य फोन नम्बर लेख्नुहोस् (१० अङ्क)</string>
+    <string name="checkout_validation_local_level">कृपया स्थानीय तह छान्नुहोस्</string>
+    <string name="checkout_validation_ward">कृपया वडा नम्बर छान्नुहोस्</string>
+    <string name="checkout_validation_tole">कृपया गाउँ/टोलको नाम लेख्नुहोस्</string>
+
+    <!-- Order success -->
+    <string name="order_success_title">धन्यवाद!</string>
+    <string name="order_success_message">तपाईंको अर्डर सफलतापूर्वक दर्ता भयो</string>
+    <string name="order_success_id">अर्डर नम्बर: %1$s</string>
+    <string name="order_success_cod_note">हामी चाँडै तपाईंलाई सम्पर्क गर्नेछौं। सामान आइपुग्दा नगद भुक्तान गर्नुहोस्।</string>
+    <string name="order_success_track">मेरा अर्डरहरू हेर्नुहोस्</string>
+    <string name="order_success_continue">थप किनमेल गर्नुहोस्</string>
+
+    <!-- My Orders -->
+    <string name="my_orders_title">मेरा अर्डरहरू</string>
+    <string name="my_orders_empty">अहिलेसम्म कुनै अर्डर गर्नुभएको छैन</string>
+    <string name="order_status_pending">प्रक्रियामा</string>
+    <string name="order_status_confirmed">पुष्टि भयो</string>
+    <string name="order_status_shipped">पठाइयो</string>
+    <string name="order_status_delivered">डेलिभर भयो</string>
+    <string name="order_status_cancelled">रद्द भयो</string>
+    <string name="order_date">मिति: %1$s</string>
+    <string name="order_items_count">%1$d वस्तुहरू</string>
+    <string name="order_detail_title">अर्डर विवरण</string>
+    <string name="order_detail_items">अर्डर गरिएका वस्तुहरू</string>
+    <string name="order_detail_delivery_address">डेलिभरी ठेगाना</string>
+    <string name="order_detail_payment">भुक्तानी विधि</string>
+    <string name="order_detail_status">अर्डर स्थिति</string>
+    <string name="order_detail_total">कुल रकम</string>
+
+    <!-- Account -->
+    <string name="account_title">खाता</string>
+    <string name="account_my_orders">मेरा अर्डरहरू</string>
+    <string name="account_about">हाम्रो बारेमा</string>
+    <string name="account_contact">सम्पर्क गर्नुहोस्</string>
+    <string name="account_admin_login">एडमिन लगइन</string>
+    <string name="account_app_version">संस्करण %1$s</string>
+    <string name="account_phone_label">फोन: %1$s</string>
+    <string name="account_address_label">सप्तरी, मधेश प्रदेश, नेपाल</string>
+
+    <!-- Admin Login -->
+    <string name="admin_login_title">एडमिन लगइन</string>
+    <string name="admin_login_subtitle">सप्तरी शप व्यवस्थापन प्यानल</string>
+    <string name="admin_login_email">इमेल ठेगाना</string>
+    <string name="admin_login_password">पासवर्ड</string>
+    <string name="admin_login_button">लगइन गर्नुहोस्</string>
+    <string name="admin_login_error">इमेल वा पासवर्ड मिलेन</string>
+    <string name="admin_login_validation_email">मान्य इमेल लेख्नुहोस्</string>
+    <string name="admin_login_validation_password">पासवर्ड कम्तीमा ६ अक्षरको हुनुपर्छ</string>
+    <string name="admin_login_not_authorized">तपाईंलाई एडमिन पहुँच छैन</string>
+    <string name="admin_login_back_to_shop">ग्राहक एपमा फर्कनुहोस्</string>
+
+    <!-- Admin Dashboard -->
+    <string name="admin_dashboard_title">एडमिन ड्यासबोर्ड</string>
+    <string name="admin_dashboard_welcome">नमस्ते, एडमिन</string>
+    <string name="admin_manage_products">उत्पादन व्यवस्थापन</string>
+    <string name="admin_manage_categories">श्रेणी व्यवस्थापन</string>
+    <string name="admin_manage_orders">अर्डर व्यवस्थापन</string>
+    <string name="admin_total_products">कुल उत्पादन</string>
+    <string name="admin_total_orders">कुल अर्डर</string>
+    <string name="admin_pending_orders">प्रक्रियामा रहेका</string>
+    <string name="admin_logout_confirm">के तपाईं लगआउट गर्न निश्चित हुनुहुन्छ?</string>
+
+    <!-- Admin Products -->
+    <string name="admin_products_title">उत्पादनहरू</string>
+    <string name="admin_products_empty">अहिलेसम्म कुनै उत्पादन थपिएको छैन</string>
+    <string name="admin_add_product">नयाँ उत्पादन थप्नुहोस्</string>
+    <string name="admin_edit_product">उत्पादन सम्पादन गर्नुहोस्</string>
+    <string name="admin_product_name">उत्पादनको नाम</string>
+    <string name="admin_product_name_hint">जस्तै: बासमती चामल ५ के.जी.</string>
+    <string name="admin_product_price">मूल्य (रु.)</string>
+    <string name="admin_product_old_price">पुरानो मूल्य (ऐच्छिक, छुटको लागि)</string>
+    <string name="admin_product_description">विवरण</string>
+    <string name="admin_product_description_hint">उत्पादनको बारेमा छोटकरी जानकारी लेख्नुहोस्</string>
+    <string name="admin_product_category">श्रेणी</string>
+    <string name="admin_product_unit">इकाई (जस्तै: के.जी., पीस, लिटर)</string>
+    <string name="admin_product_stock">स्टक परिमाण</string>
+    <string name="admin_product_photo">उत्पादनको फोटो</string>
+    <string name="admin_product_photo_select">फोटो छान्नुहोस्</string>
+    <string name="admin_product_photo_change">फोटो परिवर्तन गर्नुहोस्</string>
+    <string name="admin_product_active">सक्रिय (ग्राहकलाई देखिने)</string>
+    <string name="admin_product_featured">विशेष अफरमा राख्नुहोस्</string>
+    <string name="admin_product_save_success">उत्पादन सुरक्षित भयो</string>
+    <string name="admin_product_delete_confirm">के तपाईं यो उत्पादन मेटाउन चाहनुहुन्छ?</string>
+    <string name="admin_product_delete_success">उत्पादन मेटाइयो</string>
+    <string name="admin_uploading_image">फोटो अपलोड हुँदैछ…</string>
+    <string name="admin_saving_product">उत्पादन सुरक्षित गरिँदैछ…</string>
+    <string name="admin_validation_name">उत्पादनको नाम लेख्नुहोस्</string>
+    <string name="admin_validation_price">मान्य मूल्य लेख्नुहोस्</string>
+    <string name="admin_validation_category">श्रेणी छान्नुहोस्</string>
+    <string name="admin_validation_image">कृपया उत्पादनको फोटो छान्नुहोस्</string>
+
+    <!-- Admin Categories -->
+    <string name="admin_categories_title">श्रेणीहरू</string>
+    <string name="admin_add_category">नयाँ श्रेणी थप्नुहोस्</string>
+    <string name="admin_category_name_hint">श्रेणीको नाम लेख्नुहोस्</string>
+    <string name="admin_category_delete_confirm">के तपाईं यो श्रेणी मेटाउन चाहनुहुन्छ?</string>
+
+    <!-- Admin Orders -->
+    <string name="admin_orders_title">अर्डरहरू</string>
+    <string name="admin_orders_empty">अहिलेसम्म कुनै अर्डर आएको छैन</string>
+    <string name="admin_order_filter_all">सबै</string>
+    <string name="admin_order_customer">ग्राहक</string>
+    <string name="admin_order_phone">फोन</string>
+    <string name="admin_order_address">ठेगाना</string>
+    <string name="admin_order_update_status">अर्डर स्थिति परिवर्तन गर्नुहोस्</string>
+    <string name="admin_order_status_updated">अर्डर स्थिति अपडेट भयो</string>
+    <string name="admin_order_call_customer">ग्राहकलाई फोन गर्नुहोस्</string>
+    <string name="admin_order_total_amount">कुल रकम</string>
+
+    <!-- Local levels label -->
+    <string name="label_local_level">स्थानीय तह</string>
+    <string name="label_ward">वडा नं.</string>
+    <string name="label_village_tole">गाउँ/टोल</string>
+    <string name="label_district">जिल्ला: सप्तरी</string>
+    <string name="label_province">प्रदेश: मधेश प्रदेश</string>
+</resources>

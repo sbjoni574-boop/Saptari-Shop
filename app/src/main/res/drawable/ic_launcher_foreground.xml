@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Shopping bag icon representing "Saptari Shop" -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,40 L38,32 C38,22.6 45.6,15 55,15 C64.4,15 72,22.6 72,32 L72,40 L80,40 L84,88 C84,91.3 81.3,94 78,94 L32,94 C28.7,94 26,91.3 26,88 L30,40 Z M46,40 L64,40 L64,32 C64,27 60,23 55,23 C50,23 46,27 46,32 Z" />
+    <path
+        android:fillColor="#1B8A5A"
+        android:pathData="M44,52 a4,4 0,0 0,8 0" />
+    <path
+        android:fillColor="#1B8A5A"
+        android:pathData="M64,52 a4,4 0,0 0,8 0" />
+</vector>
